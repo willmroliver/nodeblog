@@ -1,0 +1,233 @@
+/* 
+    COLOUR PALETTE
+
+        #191919
+        #2D4263 
+        #C84B31
+        #ECDBBA
+
+    FONTS 
+
+        font-family: 'Pacifico', cursive;
+        font-family: 'Nova Mono', monospace;
+        font-family: 'Xanh Mono', monospace;
+*/
+
+/* TITLE PAGE */
+.navbar {
+    padding-left: 0;
+    padding-right: 0;
+
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+.navbar-brand, .nav-link { /* Overrides default styling for HTML button elements in navbar */
+    background: none;
+    border-style: none;
+    font-family: 'Nova Mono', monospace;
+}
+.home-navbar { /* Overrides Bootstrap styling for navbar*/
+    color: #191919 !important;
+}
+#title {
+    background-color: #ECDBBA;
+    color: #191919;
+    padding: 0 15%;
+}
+.title-text-img {
+    background-color: #ECDBBA;
+    padding: 25px 0;
+    text-align: center;
+}
+.title-text {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    font-weight: 300;
+
+    margin: 75px auto;
+}
+.title-img {
+    border-color: #191919;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 3px;
+    margin: 0 auto;
+    opacity: 70%;
+    width: 190px;
+}
+.subtitle-text {
+    font-family: 'Xanh Mono', monospace;
+    font-size: 1.6rem;
+
+    line-height: 1.5;
+    margin: 65px 0;
+    text-align: center;
+}
+
+/* POST STYLES */
+#posts {
+    font-family: 'Xanh Mono', monospace;
+    padding: 0 15%;
+}
+.post-input {
+    background: none;
+    border-style: none;
+    display: block;
+
+    margin: 0 auto;
+    padding: 20px;
+    width: 75%;
+}
+.post-input::placeholder {
+    text-align: center;
+}
+.post-input::-webkit-scrollbar {
+    width: 15px;
+}
+.post-input::-webkit-scrollbar-track {
+    background: none;
+    border-radius: 10px;
+}
+.post-input::-webkit-scrollbar-thumb {
+    background: #ECDBBA;
+    border-radius: 10px;
+}
+.post-input:focus {
+    outline: none !important;
+}
+.title-input {
+    font-size: 1.5rem;
+    margin-top: 75px;
+}
+.title-input:focus {
+    font-size: 2.5rem;
+}
+.body-input {
+    font-size: 1rem;
+    padding-bottom: 50px;
+}
+.body-input:focus {
+    font-family: "Nova Mono", monospace;
+}
+.right-align {
+    text-align: right;
+}
+.upload-post {
+    background-color: #2D4263;
+    border-radius: 10px;
+    border-style: none;
+
+    color: #ECDBBA;
+    font-family: 'Nova Mono', monospace !important;
+    font-size: 1.2rem;
+
+    padding: 1px 5px;
+    width: 100px;
+}
+.post-title, .about-title {
+    font-family: 'Xanh Mono', monospace;
+    font-size: 3rem;
+
+    margin: 25px 0;
+}
+.post-title {
+    margin-top: 50px;
+}
+.post-body {
+    font-family: 'Nova Mono', monospace;
+    margin-bottom: 100px;
+    white-space: pre-line;
+}
+.read-more {
+    background: none;
+    border-style: none;
+    color: #C84B31;
+    display: inline;
+}
+
+/* FOOTER */
+footer {
+    margin: 50px 15% 10px;
+    opacity: 60%;
+    text-align: center;
+}
+
+/* ABOUT PAGE */
+#about-title {
+    background-color: #2D4263;
+    color: #ECDBBA;
+    padding: 0 15% 75px;
+}
+.about-navbar { /* Overrides Bootstrap navbar styling for navbar */
+    color: #ECDBBA !important;
+}
+.about-text-img {
+    text-align: center;
+}
+#about-img {
+    border-color: #ECDBBA;
+    margin-top: 25px;
+    opacity: 85%;
+}
+.about-title-text {
+    color: #ECDBBA;
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+
+    margin: 75px auto;
+}
+#about {
+    background-color: #ECDBBA;
+    color: #191919;
+    padding: 100px 15%;
+    text-align: center;
+}
+.about-title {
+    color: #2D4263;
+}
+.about-body {
+    font-family: 'Nova Mono', monospace;
+    padding-bottom: 100px;
+    text-align: left;
+}
+
+/* READ MORE PAGE */
+#read-more-viewer, #all-posts {
+    background-color: #C84B31;
+    color: #ECDBBA;
+    padding: 0 15%;
+}
+.read-more-nav {
+    background: none;
+}
+.read-more-title, #all-posts-body {
+    font-family: 'Xanh Mono', monospace;
+    font-size: 3rem;
+
+    padding: 50px;
+    text-align: center;
+}
+.read-more-body {
+    background-color: #ECDBBA;
+    color: #191919;
+
+    font-family: 'Nova Mono', monospace;
+    font-size: 1.1rem;
+    line-height: 1.7;
+
+    padding: 50px 15% 100px;
+    white-space: pre-line;
+}
+
+/* ALL POSTS PAGE */
+#all-posts {
+    padding-bottom: 75px;
+}
+#all-posts-body {
+    padding: 50px 25%;
+}
+#all-posts-body form {
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}

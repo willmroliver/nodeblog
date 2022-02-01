@@ -1,0 +1,51 @@
+<%- include("header"); %>
+
+    <section id="all-posts">
+
+        <nav class="navbar navbar-expand-lg navbar-dark read-more-nav">
+            <a class="navbar-brand about-navbar" href="#">NodeBlog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <form action="/" method="post">
+                            <button class="nav-link about-navbar" type="submit" value="about">Home</button>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <form action="/about" method="post">
+                            <button class="nav-link about-navbar" type="submit" value="about">About</button>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <form action="/allposts" method="post">
+                            <button class="nav-link about-navbar" type="submit" value="about">Posts</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="about-text-img">
+            <img class="title-img" src="img/about-img.jpg" alt="about-img" id="about-img">
+            <h2 class="about-title-text">All Posts</h2>
+            <h3 class="subtitle-text">Just not any you'd want to read</h3>
+        </div>
+
+    </section>
+
+    <section id="all-posts-body">
+
+        <% for (var i = 0; i < blogPosts.length; i++) { %>
+            <h1><%= blogPosts[blogPosts.length - 1 - i][0] %></h1>
+            <form action="/posts" method="post">
+                <button class="read-more"  type="submit" name="postIndex" value="<%= blogPosts.length - 1 - i %>">read</button>
+            </form>
+        <% } %>
+
+    </section>
+
+<%- include("footer"); %> 
