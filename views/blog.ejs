@@ -37,15 +37,6 @@
 
     <section id="posts">
 
-        <form action="/" method="post" autocomplete="off">
-            <input class="post-input title-input" type="text" name="postTitle" placeholder="Give it a Title...">
-            <textarea class="post-input body-input" type="text" name="postBody" placeholder="Write your post here."></textarea>
-            
-            <div class="right-align">
-                <input class="upload-post" type="submit" value="Post it">
-            </div>
-        </form>
-
         <div>
             <% for (var i = 0; i < blogPosts.length; i++) { %> 
                 <h3 class="post-title"><%= blogPosts[blogPosts.length - 1 - i][0] %> </h3>

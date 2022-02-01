@@ -44,6 +44,11 @@ app.get("/posts/:postIndex", function(req, res) {
     }
 })
 
+app.get("/compose", function(req, res) {
+    
+    res.render("compose");
+})
+
 app.get("/allposts", function(req, res) {
 
     res.render("allposts", {
@@ -62,6 +67,7 @@ app.post("/", function(req, res) {
 
     res.redirect("/");
 })
+
 
 app.listen(3000, function() {
     console.log("Listening on 3000");

@@ -135,10 +135,7 @@ a:hover {
     font-family: 'Xanh Mono', monospace;
     font-size: 3rem;
 
-    margin: 25px 0;
-}
-.post-title {
-    margin-top: 50px;
+    margin: 75px 0 0;
 }
 .post-body {
     font-family: 'Nova Mono', monospace;
@@ -237,7 +234,23 @@ footer {
 #all-posts-body {
     padding: 50px 25%;
 }
-#all-posts-body form {
+.all-posts-read-more {
+    background: none;
+    border-style: none;
+    color: #C84B31;
+    display: block;
+
     font-size: 1.1rem;
-    margin-bottom: 50px;
+    margin: 10px 0 65px;
+}
+.all-posts-h1 {
+    font-family: 'Xanh Mono', monospace;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* COMPOSE PAGE */
+#compose {
+    font-family: 'Xanh Mono', monospace;
+    padding: 75px 15%;
 }
