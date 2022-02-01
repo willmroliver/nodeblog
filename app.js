@@ -24,8 +24,24 @@ app.get("/about", function(req, res) {
 })
 
 app.get("/posts", function(req, res) {
-    
+
     res.redirect("allposts");
+})
+
+app.get("/posts/:postIndex", function(req, res) {
+    
+    let postIndex = req.params.postIndex;
+
+    if (blogPosts.length > 0 && 0 <= postIndex && postIndex < blogPosts.length) {
+
+        let postTitle = blogPosts[postIndex][0];
+        let postBody = blogPosts[postIndex][1];
+
+        res.render("posts", {
+            postTitle : postTitle,
+            postBody : postBody,
+        })
+    }
 })
 
 app.get("/allposts", function(req, res) {
@@ -54,19 +70,10 @@ app.post("/about", function(req, res) {
 
 app.post("/posts", function(req, res) {
 
-    let postIndex = parseInt(req.body["postIndex"]);
+    let postIndex = req.body["postIndex"];
+    let postURL = "/posts/" + postIndex;
 
-    if (typeof postIndex === "number") {
-
-        let postTitle = blogPosts[postIndex][0];
-        let postBody = blogPosts[postIndex][1];
-
-        res.render("posts", {
-            postTitle : postTitle,
-            postBody : postBody,
-        })
-    }
-    else res.redirect("allposts");
+    res.redirect(postURL);
 })
 
 app.post("/allposts", function(req, res) {
