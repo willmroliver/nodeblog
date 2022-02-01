@@ -11,19 +11,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <form action="/" method="post">
-                            <button class="nav-link home-navbar" type="submit" value="about">Home</button>
-                        </form>
+                        <a class="nav-link home-navbar" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <form action="/about" method="post">
-                            <button class="nav-link home-navbar" type="submit" value="about">About</button>
-                        </form>
+                        <a class="nav-link home-navbar" href="/about">About</a>
                     </li>
                     <li class="nav-item">
-                        <form action="/allposts" method="post">
-                            <button class="nav-link home-navbar" type="submit" value="about">Posts</button>
-                        </form>
+                        <a class="nav-link home-navbar" href="/allposts">Posts</a>
                     </li>
                 </ul>
             </div>
@@ -57,7 +51,7 @@
                 <h3 class="post-title"><%= blogPosts[blogPosts.length - 1 - i][0] %> </h3>
                 <form action="/posts" method="post">
                     <p class="post-body">
-                        <%=  blogPosts[blogPosts.length - 1 - i][1].substr(0, 300) %><button class="read-more"  type="submit" name="postIndex" value="<%= blogPosts.length - 1 - i %>"> ... read more</button>
+                        <%=  blogPosts[blogPosts.length - 1 - i][1].substr(0, 300) %><a class="read-more" href="posts/<%= blogPosts.length - 1 - i %>"> ... read more</a>
                     </p>
                 </form> 
             <% } %> 

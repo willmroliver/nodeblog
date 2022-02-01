@@ -63,23 +63,6 @@ app.post("/", function(req, res) {
     res.redirect("/");
 })
 
-app.post("/about", function(req, res) {
-
-    res.redirect("about");
-})
-
-app.post("/posts", function(req, res) {
-
-    let postIndex = req.body["postIndex"];
-    let postURL = "/posts/" + postIndex;
-
-    res.redirect(postURL);
-})
-
-app.post("/allposts", function(req, res) {
-    res.redirect("allposts");
-})
-
 app.listen(3000, function() {
     console.log("Listening on 3000");
 })

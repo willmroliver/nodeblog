@@ -13,6 +13,11 @@
         font-family: 'Xanh Mono', monospace;
 */
 
+/* ELEMENT SELECTORS */
+a:hover {
+    color: #2D4263;
+}
+
 /* TITLE PAGE */
 .navbar {
     padding-left: 0;
@@ -22,10 +27,12 @@
     position: sticky;
     top: 0;
 }
-.navbar-brand, .nav-link { /* Overrides default styling for HTML button elements in navbar */
-    background: none;
-    border-style: none;
+.navbar-brand, .nav-link {
     font-family: 'Nova Mono', monospace;
+}
+.nav-link:hover {
+    color: white !important;
+    transform: scale(1.1);
 }
 .home-navbar { /* Overrides Bootstrap styling for navbar*/
     color: #191919 !important;
@@ -43,7 +50,6 @@
 .title-text {
     font-family: 'Pacifico', cursive;
     font-size: 3rem;
-    font-weight: 300;
 
     margin: 75px auto;
 }
@@ -101,7 +107,7 @@
     margin-top: 75px;
 }
 .title-input:focus {
-    font-size: 2.5rem;
+    transform: scale(1.2);
 }
 .body-input {
     font-size: 1rem;
@@ -202,10 +208,14 @@ footer {
     background: none;
 }
 .read-more-title, #all-posts-body {
-    font-family: 'Xanh Mono', monospace;
+    font-family: 'Pacifico', cursive;
     font-size: 3rem;
 
-    padding: 50px;
+    padding: 50px 0;
+    margin-bottom: 20px;
+}
+#all-posts-body {
+    margin: 50px 0;
     text-align: center;
 }
 .read-more-body {
