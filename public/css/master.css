@@ -160,13 +160,14 @@ footer {
 #about-title {
     background-color: #2D4263;
     color: #ECDBBA;
-    padding: 0 15% 75px;
+    padding: 0 15%;
 }
 .about-navbar { /* Overrides Bootstrap navbar styling for navbar */
     color: #ECDBBA !important;
 }
 .about-text-img {
     text-align: center;
+    padding-bottom: 75px;
 }
 #about-img {
     border-color: #ECDBBA;
@@ -188,6 +189,7 @@ footer {
 }
 .about-title {
     color: #2D4263;
+    margin-bottom: 15px;
 }
 .about-body {
     font-family: 'Nova Mono', monospace;
@@ -228,9 +230,6 @@ footer {
 }
 
 /* ALL POSTS PAGE */
-#all-posts {
-    padding-bottom: 75px;
-}
 #all-posts-body {
     padding: 50px 25%;
 }
