@@ -253,3 +253,9 @@ footer {
     font-family: 'Xanh Mono', monospace;
     padding: 75px 15%;
 }
+
+@media only screen and (max-width: 675px) {
+    .about-text-img {
+        padding-bottom: 114px;
+    }
+}
