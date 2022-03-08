@@ -83,8 +83,6 @@ const findAllPosts = () => {
             const result = posts.find({});
             const postsArray = await result.toArray();
 
-            console.log(postsArray);
-
             return postsArray;
         } finally {
             await client.close();
