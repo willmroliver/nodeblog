@@ -29,7 +29,7 @@
                 NodeBlog
             </h1>
             <h2 class="subtitle-text">
-                A Node.js Blog,<br> coded and written by yours truly x
+                A Node.js Blog,<br> coded and authored by Will Oliver
             </h2>
         </div>
 
@@ -39,10 +39,10 @@
 
         <div>
             <% for (var i = 0; i < blogPosts.length; i++) { %> 
-                <h3 class="post-title"><%= blogPosts[blogPosts.length - 1 - i][0] %> </h3>
+                <h3 class="post-title"><%= blogPosts[blogPosts.length - 1 - i].title %> </h3>
                 <form action="/posts" method="post">
                     <p class="post-body">
-                        <%=  blogPosts[blogPosts.length - 1 - i][1].substr(0, 300) %><a class="read-more" href="posts/<%= blogPosts.length - 1 - i %>"> ... read more</a>
+                        <%=  blogPosts[blogPosts.length - 1 - i].body.substr(0, 300) %><a class="read-more" href="posts/<%= blogPosts[blogPosts.length - 1 - i]._id %>"> ... read more</a>
                     </p>
                 </form> 
             <% } %> 
