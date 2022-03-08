@@ -42,7 +42,7 @@ app.get("/compose", function(req, res) {
 
 app.get("/allposts", function(req, res) {
 
-    findAllPostsAndRender("allPosts", res);
+    findAllPostsAndRender("allposts", res);
 })
 
 
