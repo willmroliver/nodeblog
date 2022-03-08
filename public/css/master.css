@@ -11,6 +11,7 @@
         font-family: 'Pacifico', cursive;
         font-family: 'Nova Mono', monospace;
         font-family: 'Xanh Mono', monospace;
+        font-family: 'Hubballi', sans-serif;
 */
 
 /* ELEMENT SELECTORS */
@@ -188,6 +189,7 @@ footer {
 }
 .about-title {
     color: #2D4263;
+    margin-bottom: 20px;
 }
 .about-body {
     font-family: 'Nova Mono', monospace;
@@ -219,9 +221,10 @@ footer {
     background-color: #ECDBBA;
     color: #191919;
 
-    font-family: 'Nova Mono', monospace;
+    font-family: 'Hubballi', sans-serif;
     font-size: 1.1rem;
     line-height: 1.7;
+    letter-spacing: 1px;
 
     padding: 50px 15% 100px;
     white-space: pre-line;

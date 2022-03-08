@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const dataHandler = require(__dirname + "/data.js");
 
 const app = express();
 
@@ -11,50 +12,39 @@ var blogPosts = [];
 
 app.get("/", function(req, res) {
 
-    res.render("blog", {
-        blogPosts : blogPosts,
-    });
+    findAllPostsAndRender("blog", res);
 })
 
 app.get("/about", function(req, res) {
 
-    res.render("about", {
-        blogPosts : blogPosts,
-    });
+    res.render("about");
 })
+
 
 app.get("/posts", function(req, res) {
 
     res.redirect("allposts");
 })
 
-app.get("/posts/:postIndex", function(req, res) {
+
+app.get("/posts/:postId", function(req, res) {
     
-    let postIndex = req.params.postIndex;
-
-    if (blogPosts.length > 0 && 0 <= postIndex && postIndex < blogPosts.length) {
-
-        let postTitle = blogPosts[postIndex][0];
-        let postBody = blogPosts[postIndex][1];
-
-        res.render("posts", {
-            postTitle : postTitle,
-            postBody : postBody,
-        })
-    }
+    const postId = req.params.postId;
+    findOnePostAndRender(postId, "posts", res)
 })
+
 
 app.get("/compose", function(req, res) {
     
     res.render("compose");
 })
 
+
 app.get("/allposts", function(req, res) {
 
-    res.render("allposts", {
-        blogPosts : blogPosts,
-    })
+    findAllPostsAndRender("allPosts", res);
 })
+
 
 app.post("/", function(req, res) {
 
@@ -62,7 +52,12 @@ app.post("/", function(req, res) {
         let postTitle = req.body["postTitle"];
         let postBody = req.body["postBody"];
 
-        blogPosts.push([postTitle, postBody]); 
+        let newPost = {
+            title: postTitle,
+            body: postBody,
+        }
+
+        dataHandler.uploadPost(newPost);
     }
 
     res.redirect("/");
@@ -72,3 +67,26 @@ app.post("/", function(req, res) {
 app.listen(process.env.PORT || 3000, function() {
     console.log("Listening on 3000");
 })
+
+
+const findAllPostsAndRender = async (renderParam, res) => {
+    
+    const blogPosts = await dataHandler.findAllPosts();
+    console.log(blogPosts);
+
+    res.render(renderParam, {
+        blogPosts : blogPosts,
+    })
+}
+const findOnePostAndRender = async (postId, renderParam, res) => {
+
+    const post = await dataHandler.findPost(postId);
+
+    const postTitle = post.title;
+    const postBody = post.body;
+
+    res.render(renderParam, {
+        postTitle : postTitle,
+        postBody : postBody,
+    })
+}

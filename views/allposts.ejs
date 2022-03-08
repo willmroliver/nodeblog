@@ -34,8 +34,8 @@
     <section id="all-posts-body">
 
         <% for (var i = 0; i < blogPosts.length; i++) { %>
-            <h1 class="all-posts-h1"><%= blogPosts[blogPosts.length - 1 - i][0] %></h1>
-            <a class="all-posts-read-more" href="posts/<%= blogPosts.length - 1 - i %>">read</a>
+            <h1 class="all-posts-h1"><%= blogPosts[blogPosts.length - 1 - i].title %></h1>
+            <a class="all-posts-read-more" href="posts/<%= blogPosts[blogPosts.length - 1 - i]._id %>">read</a>
         <% } %>
 
     </section>
